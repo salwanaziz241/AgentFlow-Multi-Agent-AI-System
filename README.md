@@ -87,9 +87,6 @@ Five automated tests cover demo artifacts, empty inputs, invalid citations, miss
 4. Add run-level cost, token usage, and latency monitoring.
 5. Deploy a small hosted interface with an evaluation dataset and reproducible benchmark.
 
-## Interview explanation
-
-“I built an agent pipeline where separate components plan a research task, retrieve source material, analyze it, critique it, and write a report. I also implemented a rule-based citation checker and a limited correction loop, plus a browser dashboard showing the intermediate outputs. I tested the offline workflow and designed the code so the model and retrieval tools can be replaced. The citation check verifies references exist; it does not prove the underlying claims are correct.”
 
 ## Responsible use
 
@@ -109,7 +106,7 @@ python -m pip install -e '.[studio]'
 python -m streamlit run agentflow/webapp.py
 ```
 
-Your browser should open at `http://localhost:8501`. Choose **Offline demo** and
+ browser should open at `http://localhost:8501`. Choose **Offline demo** and
 click **Run agents**. Demo mode uses fixed example text regardless of your question.
 It demonstrates the workflow but does **not** research your topic.
 
