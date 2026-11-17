@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AgentFlow | Run Studio</title><style>
+:root{font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:#e8ecf5;background:#090e1a}
+*{box-sizing:border-box}body{margin:0}.shell{max-width:1180px;margin:auto;padding:36px 24px}
+.eyebrow{color:#8ca8f9;letter-spacing:.15em;text-transform:uppercase;font-size:11px;font-weight:700}
+h1{font-size:clamp(30px,5vw,52px);letter-spacing:-.05em;margin:10px 0}h2{font-size:18px;margin:0 0 15px}
+p{color:#aebad0;line-height:1.65}.muted{color:#8494ad}.top{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.pill{border:1px solid #344263;padding:8px 12px;border-radius:100px;font-size:12px;color:#b9c9e8}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}.metric,.panel{border:1px solid #25314a;background:#111a2c;border-radius:16px;padding:22px}
+.metric strong{display:block;font-size:30px;margin-top:8px}.metric span{color:#9baac5;font-size:12px}
+.layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}.wide{grid-column:1/-1}
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.step{background:#192743;border:1px solid #32476c;padding:9px 13px;border-radius:9px;color:#bcd1fb;font-size:13px}
+pre{white-space:pre-wrap;word-break:break-word;background:#0b1220;border:1px solid #263550;padding:16px;border-radius:10px;max-height:380px;overflow:auto;color:#d2ddef;font-size:12px;line-height:1.65}
+.source{padding:12px 0;border-bottom:1px solid #263550}.source a{color:#9abaff;overflow-wrap:anywhere}
+details{border-bottom:1px solid #29364e;padding:12px 0}summary{cursor:pointer;font-weight:600}summary span{color:#8494ad;font-size:12px;margin-left:10px}
+.good{color:#72d5b0}.warn{color:#ffce82}footer{padding:24px 0;color:#71809b;font-size:12px}
+@media(max-width:700px){.metrics{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}.wide{grid-column:auto}.top{display:block}}
+</style></head><body><main class="shell"><div class="top"><div><div class="eyebrow">AgentFlow / Run Studio</div><h1>Research, with receipts.</h1><p>Explore how specialized agents turned a question into a source-backed report.</p></div><span class="pill">DEMO RUN</span></div><section class="panel"><div class="eyebrow">Research question</div><h2 style="margin-top:12px">How can AI agents improve customer support?</h2><div class="steps"><span class="step">Plan</span><span class="step">Retrieve</span><span class="step">Analyze</span><span class="step">Critique</span><span class="step">Draft</span><span class="step">Audit</span><span class="step">Revise</span></div><span class="good">● Passed automated citation checks</span><p class="muted" style="font-size:12px">Citation coverage is a formatting/evidence-reference check, not proof that claims are true.</p></section><section class="metrics"><div class="metric"><span>Agent steps</span><strong>6</strong></div><div class="metric"><span>Sources</span><strong>2</strong></div><div class="metric"><span>Citation coverage</span><strong>100%</strong></div><div class="metric"><span>Revisions</span><strong>0</strong></div></section><div class="layout"><section class="panel"><h2>Evidence library</h2><div class="source"><b>[S1] Demo: multi-agent systems</b><p>A multi-agent system consists of multiple interacting intelligent agents.</p><a href="https://en.wikipedia.org/wiki/Multi-agent_system" target="_blank" rel="noopener noreferrer">Open source</a></div><div class="source"><b>[S2] Demo: natural language processing</b><p>Natural language processing concerns interactions between computers and human language.</p><a href="https://en.wikipedia.org/wiki/Natural_language_processing" target="_blank" rel="noopener noreferrer">Open source</a></div></section><section class="panel"><h2>Quality gate</h2><p><b>Passed automated citation checks</b></p><p>No structural citation issues detected.</p><pre>{
+  &quot;passed&quot;: true,
+  &quot;citation_count&quot;: 4,
+  &quot;valid_citations&quot;: 4,
+  &quot;unknown_citations&quot;: [],
+  &quot;uncited_paragraphs&quot;: 0,
+  &quot;coverage&quot;: 1.0,
+  &quot;notes&quot;: []
+}</pre></section><section class="panel wide"><h2>Agent activity</h2><p>Open any step to inspect its output.</p><details><summary>Planner<span>0 ms</span></summary><pre>1. Retrieve up to three sources. 2. Summarize supported observations. 3. Check claims. 4. Write a cited report.</pre></details><details><summary>Researcher<span>0 ms</span></summary><pre>[{&quot;id&quot;: &quot;S1&quot;, &quot;title&quot;: &quot;Demo: multi-agent systems&quot;, &quot;url&quot;: &quot;https://en.wikipedia.org/wiki/Multi-agent_system&quot;, &quot;excerpt&quot;: &quot;A multi-agent system consists of multiple interacting intelligent agents.&quot;}, {&quot;id&quot;: &quot;S2&quot;, &quot;title&quot;: &quot;Demo: natural language processing&quot;, &quot;url&quot;: &quot;https://en.wikipedia.org/wiki/Natural_language_processing&quot;, &quot;excerpt&quot;: &quot;Natural language processing concerns interactions between computers and human language.&quot;}]</pre></details><details><summary>Analyst<span>0 ms</span></summary><pre>The available sources provide introductory context. Findings must be limited to what the excerpts actually say; missing details require further verification.</pre></details><details><summary>Critic<span>0 ms</span></summary><pre>Evidence check: Do not assert unsupported numerical results, causality, or source agreement. Clearly label the offline demonstration and any evidence gaps.</pre></details><details><summary>Quality_Gate<span>0 ms</span></summary><pre>{&quot;passed&quot;: true, &quot;citation_count&quot;: 4, &quot;valid_citations&quot;: 4, &quot;unknown_citations&quot;: [], &quot;uncited_paragraphs&quot;: 0, &quot;coverage&quot;: 1.0, &quot;notes&quot;: []}</pre></details><details><summary>Writer<span>0 ms</span></summary><pre># Research report: How can AI agents improve customer support?
+
+## Findings
+
+A multi-agent system consists of interacting agents [S1]. Natural language processing studies interactions between computers and human language [S2].
+
+## Limitations
+
+These short introductory excerpts do not establish performance gains or real-world effectiveness [S1] [S2].
+
+## Sources
+- [S1] Demo: multi-agent systems: https://en.wikipedia.org/wiki/Multi-agent_system
+- [S2] Demo: natural language processing: https://en.wikipedia.org/wiki/Natural_language_processing
+
+## Review notes
+Evidence check: Do not assert unsupported numerical results, causality, or source agreement. Clearly label the offline demonstration and any evidence gaps.
+</pre></details></section><section class="panel wide"><h2>Generated report</h2><pre># Research report: How can AI agents improve customer support?
+
+## Findings
+
+A multi-agent system consists of interacting agents [S1]. Natural language processing studies interactions between computers and human language [S2].
+
+## Limitations
+
+These short introductory excerpts do not establish performance gains or real-world effectiveness [S1] [S2].
+
+## Sources
+- [S1] Demo: multi-agent systems: https://en.wikipedia.org/wiki/Multi-agent_system
+- [S2] Demo: natural language processing: https://en.wikipedia.org/wiki/Natural_language_processing
+
+## Review notes
+Evidence check: Do not assert unsupported numerical results, causality, or source agreement. Clearly label the offline demonstration and any evidence gaps.
+</pre></section></div><footer>AgentFlow · Offline demo uses fixtures; live mode uses an LLM and Wikipedia. Always review sources before relying on a report.</footer></main></body></html>

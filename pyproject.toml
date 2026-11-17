@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentflow-portfolio"
+version = "0.1.0"
+description = "Auditable multi-agent research pipeline with offline demo and OpenAI-backed execution"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+llm = ["openai>=1.40,<3"]
+studio = ["streamlit>=1.35,<2"]
+all = ["openai>=1.40,<3", "streamlit>=1.35,<2"]
+
+[project.scripts]
+agentflow = "agentflow.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["agentflow*"]

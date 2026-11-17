@@ -1,0 +1,70 @@
+{
+  "question": "How can AI agents improve customer support?",
+  "plan": "1. Retrieve up to three sources. 2. Summarize supported observations. 3. Check claims. 4. Write a cited report.",
+  "evidence": [
+    {
+      "id": "S1",
+      "title": "Demo: multi-agent systems",
+      "url": "https://en.wikipedia.org/wiki/Multi-agent_system",
+      "excerpt": "A multi-agent system consists of multiple interacting intelligent agents."
+    },
+    {
+      "id": "S2",
+      "title": "Demo: natural language processing",
+      "url": "https://en.wikipedia.org/wiki/Natural_language_processing",
+      "excerpt": "Natural language processing concerns interactions between computers and human language."
+    }
+  ],
+  "analysis": "The available sources provide introductory context. Findings must be limited to what the excerpts actually say; missing details require further verification.",
+  "critique": "Evidence check: Do not assert unsupported numerical results, causality, or source agreement. Clearly label the offline demonstration and any evidence gaps.",
+  "report": "# Research report: How can AI agents improve customer support?\n\n## Findings\n\nA multi-agent system consists of interacting agents [S1]. Natural language processing studies interactions between computers and human language [S2].\n\n## Limitations\n\nThese short introductory excerpts do not establish performance gains or real-world effectiveness [S1] [S2].\n\n## Sources\n- [S1] Demo: multi-agent systems: https://en.wikipedia.org/wiki/Multi-agent_system\n- [S2] Demo: natural language processing: https://en.wikipedia.org/wiki/Natural_language_processing\n\n## Review notes\nEvidence check: Do not assert unsupported numerical results, causality, or source agreement. Clearly label the offline demonstration and any evidence gaps.\n",
+  "audit": {
+    "passed": true,
+    "citation_count": 4,
+    "valid_citations": 4,
+    "unknown_citations": [],
+    "uncited_paragraphs": 0,
+    "coverage": 1.0,
+    "notes": []
+  },
+  "revisions": 0,
+  "mode": "demo",
+  "trace": [
+    {
+      "agent": "planner",
+      "timestamp": "2026-11-17T15:16:11.806352+00:00",
+      "duration_ms": 0,
+      "output": "1. Retrieve up to three sources. 2. Summarize supported observations. 3. Check claims. 4. Write a cited report."
+    },
+    {
+      "agent": "researcher",
+      "timestamp": "2026-11-17T15:16:11.806411+00:00",
+      "duration_ms": 0,
+      "output": "[{\"id\": \"S1\", \"title\": \"Demo: multi-agent systems\", \"url\": \"https://en.wikipedia.org/wiki/Multi-agent_system\", \"excerpt\": \"A multi-agent system consists of multiple interacting intelligent agents.\"}, {\"id\": \"S2\", \"title\": \"Demo: natural language processing\", \"url\": \"https://en.wikipedia.org/wiki/Natural_language_processing\", \"excerpt\": \"Natural language processing concerns interactions between computers and human language.\"}]"
+    },
+    {
+      "agent": "analyst",
+      "timestamp": "2026-11-17T15:16:11.806418+00:00",
+      "duration_ms": 0,
+      "output": "The available sources provide introductory context. Findings must be limited to what the excerpts actually say; missing details require further verification."
+    },
+    {
+      "agent": "critic",
+      "timestamp": "2026-11-17T15:16:11.806421+00:00",
+      "duration_ms": 0,
+      "output": "Evidence check: Do not assert unsupported numerical results, causality, or source agreement. Clearly label the offline demonstration and any evidence gaps."
+    },
+    {
+      "agent": "quality_gate",
+      "timestamp": "2026-11-17T15:16:11.806533+00:00",
+      "duration_ms": 0,
+      "output": "{\"passed\": true, \"citation_count\": 4, \"valid_citations\": 4, \"unknown_citations\": [], \"uncited_paragraphs\": 0, \"coverage\": 1.0, \"notes\": []}"
+    },
+    {
+      "agent": "writer",
+      "timestamp": "2026-11-17T15:16:11.806543+00:00",
+      "duration_ms": 0,
+      "output": "# Research report: How can AI agents improve customer support?\n\n## Findings\n\nA multi-agent system consists of interacting agents [S1]. Natural language processing studies interactions between computers and human language [S2].\n\n## Limitations\n\nThese short introductory excerpts do not establish performance gains or real-world effectiveness [S1] [S2].\n\n## Sources\n- [S1] Demo: multi-agent systems: https://en.wikipedia.org/wiki/Multi-agent_system\n- [S2] Demo: natural language processing: https://en.wikipedia.org/wiki/Natural_language_processing\n\n## Review notes\nEvidence check: Do not assert unsupported numerical results, causality, or source agreement. Clearly label the offline demonstration and any evidence gaps.\n"
+    }
+  ]
+}
